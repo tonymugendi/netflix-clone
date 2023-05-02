@@ -5,7 +5,7 @@
 
 This is a repository for a FullStack Netflix Clone using React, NextJS, TailwindCSS & Prisma.
 
-[LIVE LINK](https://netflix-clone-i51gjz5vr-tonymugendi.vercel.app/)
+[LIVE LINK](https://netflix-clone-tonymugendi.vercel.app/)
 
 
 Features:
