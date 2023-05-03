@@ -3,6 +3,8 @@ import axios from 'axios';
 import Input from '@/components/input'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/router';
+import { FcGoogle } from "react-icons/fc"
+import { FaGithub } from 'react-icons/fa'
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -88,6 +90,22 @@ const Auth = () => {
             <button onClick={variant === 'login' ? login : register} className='bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition'>
               {variant === "register" ? "Register" : "Login"}
             </button>
+            <div className='flex flex-row items-center justify-center gap-4 mt-8'>
+              <div
+                onClick={() => signIn('google', { callbackUrl: '/' })}
+                className='w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition'>
+                <FcGoogle />
+              </div>
+              <div
+                onClick={() => signIn('github', { callbackUrl: '/' })}
+                className='w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition'>
+                <FaGithub />
+              </div>
+
+            </div>
+
+
+
             <p className='text-neutral-500 mt-12'>
               {variant === "login" ? "New to Netflix?" : "Already have an account?"}
               <span onClick={toggleVariant} className='text-white ml-1 hover:underline cursor-pointer'>
