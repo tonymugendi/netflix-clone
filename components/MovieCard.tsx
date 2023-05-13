@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 import { BsFillPlayFill } from 'react-icons/bs'
 
@@ -8,6 +9,7 @@ interface MoviCardTypes {
 
 
 const MovieCard: React.FC<MoviCardTypes> = ({ data }) => {
+  const router = useRouter()
   return (
     <div className='group bg-zinc-900 col-span relative h-[20vh]'>
       <img
@@ -18,7 +20,7 @@ const MovieCard: React.FC<MoviCardTypes> = ({ data }) => {
           shadow-xl
           rounded-md
           group-hover:opacity-90
-          group-hover:opacity-0
+          sm:group-hover:opacity-0
           delay-100
           w-full
           h-full
@@ -70,7 +72,7 @@ const MovieCard: React.FC<MoviCardTypes> = ({ data }) => {
               transition
               hover:bg-neutral-300
             '
-              onClick={() => { }}
+              onClick={() => { router.push(`/watch/${data.id}`) }}
             >
               <BsFillPlayFill size={30} />
             </div>
