@@ -18,7 +18,6 @@ Features:
 - API and Controllers creation
 - Detail-oriented effects and animations using TailwindCSS
 - React SWR data fetching
-- Zustand state management
 
 **Node version 14.x**
 
