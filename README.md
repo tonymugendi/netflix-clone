@@ -10,6 +10,7 @@ This is a repository for a FullStack Netflix Clone using React, NextJS, Tailwind
 
 Features:
 
+
 - Environment, Typescript, NextJS Setup
 - PostgreSQL & Prisma connect, Database creation
 - Authentication with NextAuth, Google & Github Login
